@@ -8,8 +8,8 @@ canvas.width = windowWidth
 
 let context = canvas.getContext('2d')
 
-let x = windowWidth / 2
-let y = windowHeight / 2
+let x = dxPadPosition
+let y = windowHeight - 10.5
 let vx = 4
 let vy = 4
 let radius = 10
@@ -53,5 +53,7 @@ function move() {
 	
 		x = x + vx
 		y = y + vy
+	} else {
+		x = dxPadPosition + 100
 	}
 }
