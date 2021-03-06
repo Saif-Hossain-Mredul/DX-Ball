@@ -7,10 +7,6 @@ html {
   font-size: 62.5%;
 }
 
-body canvas {
-  border: 1px solid red;
-}
-
 body .dx-pad {
   height: 20px;
   width: 200px;
