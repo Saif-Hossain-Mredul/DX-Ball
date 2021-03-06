@@ -8,6 +8,11 @@ html {
 }
 
 body {
+
+    canvas {
+        border: 1px solid red;
+    }
+
     .dx-pad {
         height: 20px;
         width: 200px;

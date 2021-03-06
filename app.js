@@ -1,8 +1,6 @@
-const canvas = document.querySelector('canvas')
+const bodyWidth = document.querySelector('body').clientWidth
 let dxPad = document.getElementById('dx-pad')
 let dxPadPosition = 0
-
-const bodyWidth = document.querySelector('body').clientWidth
 
 document.addEventListener('mousemove', (event) => {
 	const mousePosition = parseInt(event.clientX) - 100
