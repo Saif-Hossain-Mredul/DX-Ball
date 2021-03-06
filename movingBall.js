@@ -10,12 +10,27 @@ let context = canvas.getContext('2d')
 
 let x = dxPadPosition
 let y = windowHeight - 10.5
-let vx = 4
-let vy = 4
+let vx = 0
+let vy = 0 
 let radius = 10
+const speed = 5
+
+function generateVY(hypotenuse, base) {
+    let slope = 0.95
+
+    return Math.sqrt(Math.pow(hypotenuse, 2) - Math.pow((base * slope), 2))
+}
+
 
 document.addEventListener('click', (e) => {
-	isStarted = true
+	if(!isStarted) {
+		vx = (Math.random() * (3) + 1)
+		vy = generateVY(speed, vx)
+
+		const randomNum = Math.ceil(Math.random() * 10)
+		randomNum > 5 ? vx = -vx : vx = vx;
+	}
+	isStarted = true 
 })
 
 move()
