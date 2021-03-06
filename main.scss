@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    .dx-pad {
+        height: 20px;
+        width: 200px;
+        background-color: rgb(33, 189, 236);
+        border-radius: 5px;
+    }
+}

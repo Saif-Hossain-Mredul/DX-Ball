@@ -1,1 +1,16 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body .dx-pad {
+  height: 20px;
+  width: 200px;
+  background-color: #21bdec;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=main.css.map */
