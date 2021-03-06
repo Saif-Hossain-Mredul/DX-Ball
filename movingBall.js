@@ -22,25 +22,29 @@ function move() {
 
 	context.beginPath()
 	context.strokeStyle = 'black'
-    context.arc(x, y, radius, 0, Math.PI * 2, false)
-    context.stroke()
+	context.arc(x, y, radius, 0, Math.PI * 2, false)
+	context.stroke()
 
-    if (radius + x > windowWidth) {
-        vx = -vx
-    } 
+	if (radius + x > windowWidth) {
+		vx = -vx
+	}
 
-    if (x - radius < 0) {
-        vx = -vx
-    }
+	if (x - radius < 0) {
+		vx = -vx
+	}
 
-    if ( y + radius > windowHeight) {
-        vy = -vy
-    }
+	if (
+		y + radius > windowHeight &&
+		x >= dxPadPosition &&
+		x <= dxPadPosition + 200
+	) {
+		vy = -vy
+	}
 
-    if (y - radius < 0) {
-        vy = -vy
-    }
+	if (y - radius < 0) {
+		vy = -vy
+	}
 
-    x = x+vx
-    y = y+vy
+	x = x + vx
+	y = y + vy
 }
