@@ -15,6 +15,7 @@ let vy = 0
 let radius = 10
 const speed = 5
 
+// This function is for generate vy auto
 function generateVY(hypotenuse, base) {
     let slope = 0.95
 
@@ -23,6 +24,10 @@ function generateVY(hypotenuse, base) {
 
 
 document.addEventListener('click', (e) => {
+
+	// Here if the game has started or not is being checked
+	// If its only for first time, then it will auto generate the game with a
+	// arbitrary direction and then the flag variable is switched to false
 	if(!isStarted) {
 		vx = (Math.random() * (3) + 1)
 		vy = generateVY(speed, vx)
