@@ -12,5 +12,7 @@ body .dx-pad {
   width: 200px;
   background-color: #21bdec;
   border-radius: 5px;
+  position: absolute;
+  bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */
