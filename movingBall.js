@@ -11,7 +11,7 @@ let x = windowWidth / 2
 let y = windowHeight / 2
 let vx = 4
 let vy = 4
-let radius = 20
+let radius = 10
 
 move()
 
@@ -22,5 +22,25 @@ function move() {
 
 	context.beginPath()
 	context.strokeStyle = 'black'
-	context.arc(x, y, radius, 0, Math.PI * 2, false)
+    context.arc(x, y, radius, 0, Math.PI * 2, false)
+    context.stroke()
+
+    if (radius + x > windowWidth) {
+        vx = -vx
+    } 
+
+    if (x - radius < 0) {
+        vx = -vx
+    }
+
+    if ( y + radius > windowHeight) {
+        vy = -vy
+    }
+
+    if (y - radius < 0) {
+        vy = -vy
+    }
+
+    x = x+vx
+    y = y+vy
 }
