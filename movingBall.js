@@ -9,7 +9,7 @@ canvas.width = windowWidth
 let context = canvas.getContext('2d')
 
 let x = dxPadPosition
-let y = windowHeight - 10.5
+let y = windowHeight - 10.3
 let vx = 0
 let vy = 0
 let radius = 10
@@ -18,9 +18,7 @@ const speed = 5
 // This function is for generate vy auto
 
 function generateVY(hypotenuse, base) {
-	let slope = 0.95
-
-	return Math.sqrt(Math.pow(hypotenuse, 2) - Math.pow(base * slope, 2))
+	return Math.sqrt(Math.pow(hypotenuse, 2) - Math.pow(base, 2))
 }
 
 document.addEventListener('click', (e) => {
